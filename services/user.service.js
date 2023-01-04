@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 const Cryptr = require("cryptr");
-const cryptr = new Cryptr("secret-puk-1234");
+const cryptr = new Cryptr("secret-alon-1234");
 
 var users = require("../data/user.json");
 
@@ -48,20 +48,20 @@ function signup({ fullname, username, password }) {
 }
 
 function login(credentials) {
-  const user = users.find((u) => u.username === credentials.username);
-  if (!user) return Promise.reject("Login failed");
-  return Promise.resolve(user);
+  const user = users.find(u => u.username === credentials.username)
+  if (!user) return Promise.reject('Login failed')
+  return Promise.resolve(user)
 }
 
 function validateToken(loginToken) {
   try {
-    const json = cryptr.decrypt(loginToken);
-    const loggedinUser = JOSN.parse(json);
-    return loggedinUser;
+      const json = cryptr.decrypt(loginToken)
+      const loggedinUser = JSON.parse(json)
+      return loggedinUser
   } catch (err) {
-    console.log("invalid login token");
+      console.log('Invalid login token')
   }
-  return null;
+  return null
 }
 
 function _makeId(length = 5) {

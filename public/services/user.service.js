@@ -25,16 +25,12 @@ function signup(credentials) {
 }
 
 function login(credentials) {
-  console.log(credentials);
-  return axios.post(BASE_URL + "login", credentials)
-  .then((res) => console.log('bamba'))
-    .then((res) => res.data)
-    .then((res) => console.log(res))
-    .then((user) => {
-      console.log(user);
-      _saveLoggedinUser(user);
-      return user;
-    });
+  return axios.get(BASE_URL + 'login', credentials)
+      .then(res => res.data)
+      .then((user) => {
+        _saveLoggedinUser(user)
+          return user
+      })
 }
 
 function getEmptyCredentials(
@@ -46,16 +42,16 @@ function getEmptyCredentials(
 }
 
 function getLoggedinUser() {
-  return JSON.parse(sessionStorage.getItem("loggedinUser") || null);
+  return JSON.parse(sessionStorage.getItem('loggedinUser') || null)
 }
 
 function logout() {
-  return axios.post(BASE_URL + "logout").then(() => {
-    sessionStorage.removeItem("loggedinUser");
-  });
+  return axios.post(BASE_URL + 'logout')
+      .then(() => {
+          sessionStorage.removeItem('loggedinUser')
+      })
 }
 
 function _saveLoggedinUser(user) {
-  console.log(user);
-  sessionStorage.setItem("loogedinUser", JSON.stringify(user));
+  sessionStorage.setItem('loggedinUser', JSON.stringify(user))
 }
