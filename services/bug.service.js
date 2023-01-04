@@ -56,23 +56,31 @@ function query(filterBy) {
 
 function get(bugId) {
   const bug = bugs.find((bug) => bug._id === bugId);
+  if(!bug) return Promise.reject('Bug notfound')
   return Promise.resolve(bug);
 }
 
-function remove(bugId) {
-  bugs = bugs.filter((bug) => bug._id !== bugId);
+function remove(bugId, loggedinUser) {
+  const idx = bugs.findIndex((bug) => bug._id ===  bugId)
+  if (idx === -1) return Promise.reject('no such bug')
+  const bug = bugs[idx]
+  if(bug.creator._id !== loggedinUser._id) return Promise.reject('not youtr bug')
+  bugs.splice(idx, 1)
   return _writeBugsToFile();
 }
 
-function save(bug) {
+function save(bug, loggedinUser) {
   if (bug._id) {
-    console.log("put");
     const bugToUpdate = bugs.find((currBug) => currBug._id === bug._id);
+    if (!bugToUpdate) return Promise.reject('No such Bug')
+    if (bugToUpdate.creator._id !== loggedinUser._id) return Promise.reject('Not your bug')   
+    
     bugToUpdate.title = bug.title;
     bugToUpdate.description = bug.description;
   } else {
     console.log("post");
     bug._id = _makeId();
+    bug.creator = loggedinUser;
     bug.createdAt = Date.now();
     bug.severity = _getRandomIntInclusive(0, 2);
     bugs.push(bug);

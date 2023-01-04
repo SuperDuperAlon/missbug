@@ -27,18 +27,34 @@ app.get("/api/bug", (req, res) => {
 
 // Update
 app.put("/api/bug/:bugId", (req, res) => {
+  const loggedinUser = userService.validateToken(req.cookies.loginToken)
+  if (!loggedinUser) return res.status(400).send('cannot update bug')
+
   const bug = req.body;
-  bugService.save(bug).then((savedBug) => {
+  bugService.save(bug, loggedinUser)
+  .then((savedBug) => {
     res.send(savedBug);
-  });
+  }).catch(err => {
+    console.log('Error:', err)
+    res.status(400).send('Cannot update car')
+})
 });
 
 // Create
 app.post("/api/bug", (req, res) => {
+
+const loggedinUser = userService.validateToken(req.cookies.loginToken)
+if (!loggedinUser) return res.status(401).send('Cannot add new bug')
+
   const bug = req.body;
-  bugService.save(bug).then((savedBug) => {
+
+  bugService.save(bug, loggedinUser)
+  .then((savedBug) => {
     res.send(savedBug);
-  });
+  }).catch(err => {
+    console.log('Error:', err)
+    res.status(400).send('Cannot create bug')
+})
 });
 
 // Read - GetById
@@ -53,24 +69,33 @@ app.get("/api/bug/:bugId", (req, res) => {
     visitedBugsIds.push(bugId);
   }
 
-  bugService
-    .get(bugId)
+  bugService.get(bugId)
     .then((bug) => {
       res
         .cookie("visitedBugsIds", visitedBugsIds, { maxAge: 1000 * 7 })
         .send(bug);
     })
     .catch((err) => {
-      res.status(418).send(err.message);
+      res.status(400).send(err.message);
     });
 });
 
 // remove
 app.delete("/api/bug/:bugId", (req, res) => {
+
+
+
+  const loggedinUser = userService.validateToken(req.cookies.loginToken)
+  if (!loggedinUser) return res.status(401).send('Cannot update bug')
+
   const { bugId } = req.params;
+  
   bugService.remove(bugId).then(() => {
     res.send({ msg: "Bugs removed successfully", bugId });
-  });
+  }).catch(err => {
+    console.log('Error:', err)
+    res.status(400).send('Cannot delete car')
+})
 });
 
 /////////// USERS API ////////////

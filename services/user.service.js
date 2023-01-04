@@ -3,7 +3,7 @@ const fs = require("fs");
 const Cryptr = require("cryptr");
 const cryptr = new Cryptr("secret-alon-1234");
 
-var users = require("../data/user.json");
+var users = require('../data/user.json');
 
 module.exports = {
   query,
@@ -12,7 +12,7 @@ module.exports = {
   signup,
   login,
   getLoginToken,
-  validateToken,
+  validateToken
 };
 
 function getLoginToken(user) {
