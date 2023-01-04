@@ -1,0 +1,82 @@
+[
+    {
+      "_id": "I6ZELY",
+      "title": "Open Redirect",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et vestibulum lorem",
+      "severity": 2,
+      "createdAt": 1292772903,
+      "labels" : ["need-CR", "dev-branch"]
+    },
+    {
+      "_id": "LAQ5Y5",
+      "title": "Cross-Site Request Forgery (CSRF)",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et vestibulum lorem",
+      "severity": 1,
+      "createdAt": 1132376376,
+      "labels" : ["critical", "dev-branch"]
+    },
+    {
+      "_id": "ZOPZ4B",
+      "title": "Sensitive Information Passed to HTTP by Default",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et vestibulum lorem",
+      "severity": 3,
+      "createdAt": 1019559260,
+      "labels" : ["critical", "need-CR"]
+    },
+    {
+      "title": "jhdfkfg",
+      "description": "djskfgdk",
+      "severity": 0,
+      "createdAt": 1672670812085,
+      "_id": "520HL",
+      "labels" : ["need-CR", "dev-branch"]
+    },
+    {
+      "title": "bobo",
+      "description": "undefined",
+      "severity": 2,
+      "createdAt": 1672675385079,
+      "_id": "oJJZw",
+      "labels" : ["critical", "dev-branch"]
+    },
+    {
+      "title": "popo",
+      "description": "undefined",
+      "severity": 2,
+      "createdAt": 1672675395990,
+      "_id": "W5mQL",
+      "labels" : ["critical", "need-CR"]
+    },
+    {
+      "title": "jojo",
+      "description": "undefined",
+      "severity": 0,
+      "createdAt": 1672675413512,
+      "_id": "I9V2q",
+      "labels" : [ "need-CR", "dev-branch"]
+    },
+    {
+      "title": "yy",
+      "description": "undefined",
+      "severity": 2,
+      "createdAt": 1672675574077,
+      "_id": "iQWJJ",
+      "labels" : ["critical","dev-branch"]
+    },
+    {
+      "title": "dssd",
+      "description": "sdsds",
+      "severity": 1,
+      "createdAt": 1672676076321,
+      "_id": "TsD0G",
+      "labels" : ["critical", "need-CR"]
+    },
+    {
+      "title": "Buggy",
+      "description": "Bugger",
+      "severity": 2,
+      "createdAt": 1672676113684,
+      "_id": "NqRV7",
+      "labels" : ["critical","dev-branch"]
+    }
+  ]

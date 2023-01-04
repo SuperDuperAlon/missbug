@@ -1,0 +1,159 @@
+[
+  {
+    "title": "Buggy",
+    "description": "Bugger",
+    "severity": 2,
+    "createdAt": 1672676113684,
+    "_id": "NqRV7",
+    "creator": {
+      "_id": "u110",
+      "fullname": "puki la"
+    },
+    "labels": [
+      "critical",
+      "dev-branch"
+    ]
+  },
+  {
+    "title": "dssd",
+    "description": "sdsds",
+    "severity": 1,
+    "createdAt": 1672676076321,
+    "_id": "TsD0G",
+    "creator": {
+      "_id": "u109",
+      "fullname": "puki la"
+    },
+    "labels": [
+      "critical",
+      "need-CR"
+    ]
+  },
+  {
+    "title": "gogo",
+    "description": "undefined",
+    "severity": 2,
+    "createdAt": 1672675574077,
+    "_id": "iQWJJ",
+    "creator": {
+      "_id": "u108",
+      "fullname": "puki la"
+    },
+    "labels": [
+      "critical",
+      "dev-branch"
+    ]
+  },
+  {
+    "title": "jojo",
+    "description": "undefined",
+    "severity": 0,
+    "createdAt": 1672675413512,
+    "_id": "I9V2q",
+    "creator": {
+      "_id": "u107",
+      "fullname": "puki la"
+    },
+    "labels": [
+      "need-CR",
+      "dev-branch"
+    ]
+  },
+  {
+    "title": "popo",
+    "description": "undefined",
+    "severity": 2,
+    "createdAt": 1672675395990,
+    "_id": "W5mQL",
+    "labels": [
+      "critical",
+      "need-CR"
+    ],
+    "creator": {
+      "_id": "u106",
+      "fullname": "puki la"
+    }
+  },
+  {
+    "title": "bobo",
+    "description": "undefined",
+    "severity": 2,
+    "createdAt": 1672675385079,
+    "_id": "oJJZw",
+    "creator": {
+      "_id": "u105",
+      "fullname": "puki la"
+    },
+    "labels": [
+      "critical",
+      "dev-branch"
+    ]
+  },
+  {
+    "title": "jhdfkfg",
+    "description": "djskfgdk",
+    "severity": 0,
+    "creator": {
+      "_id": "u104",
+      "fullname": "puki la"
+    },
+    "createdAt": 1672670812085,
+    "_id": "520HL",
+    "labels": [
+      "need-CR",
+      "dev-branch"
+    ]
+  },
+  {
+    "_id": "I6ZELY",
+    "title": "Open Redirect",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et vestibulum lorem",
+    "severity": 2,
+    "creator": {
+      "_id": "u101",
+      "fullname": "puki la"
+    },
+    "createdAt": 1292772903,
+    "labels": [
+      "need-CR",
+      "dev-branch"
+    ]
+  },
+  {
+    "_id": "LAQ5Y5",
+    "title": "Cross-Site Request Forgery (CSRF)",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et vestibulum lorem",
+    "severity": 1,
+    "creator": {
+      "_id": "u102",
+      "fullname": "puki la"
+    },
+    "createdAt": 1132376376,
+    "labels": [
+      "critical",
+      "dev-branch"
+    ]
+  },
+  {
+    "_id": "ZOPZ4B",
+    "title": "Sensitive Information Passed to HTTP by Default",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et vestibulum lorem",
+    "severity": 3,
+    "creator": {
+      "_id": "u103",
+      "fullname": "puki la"
+    },
+    "createdAt": 1019559260,
+    "labels": [
+      "critical",
+      "need-CR"
+    ]
+  },
+  {
+    "title": "buggo",
+    "description": "Buggi",
+    "_id": "QRK1X",
+    "createdAt": 1672848165624,
+    "severity": 1
+  }
+]

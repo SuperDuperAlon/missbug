@@ -1,0 +1,62 @@
+[
+    {
+        "_id": "u101",
+        "username": "puki",
+        "fullname": "puki la",
+        "password": "secret1"
+    },
+    {
+        "_id": "u102",
+        "username": "muki",
+        "fullname": "puki la",
+        "password": "secret2"
+    },
+    {
+        "_id": "u103",
+        "fullname": "puki la",
+        "username": "xuki",
+        "password": "xuki"
+    },
+    {
+        "_id": "u104",
+        "fullname": "puki la",
+        "username": "xuki",
+        "password": "xuki"
+    },
+    {
+        "_id": "u105",
+        "fullname": "puki la",
+        "username": "nini",
+        "password": "nini"
+    },
+    {
+        "_id": "u106",
+        "username": "puki",
+        "fullname": "puki la",
+        "password": "secret1"
+    },
+    {
+        "_id": "u107",
+        "username": "muki",
+        "fullname": "puki la",
+        "password": "secret2"
+    },
+    {
+        "_id": "u108",
+        "fullname": "puki la",
+        "username": "xuki",
+        "password": "xuki"
+    },
+    {
+        "_id": "u109",
+        "fullname": "puki la",
+        "username": "xuki",
+        "password": "xuki"
+    },
+    {
+        "_id": "u110",
+        "fullname": "puki la",  
+        "username": "nini",
+        "password": "nini"
+    }
+]
