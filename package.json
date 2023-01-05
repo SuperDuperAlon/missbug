@@ -1,7 +1,7 @@
 {
   "name": "miss-bug-starter-react",
   "version": "1.0.0",
-  "description": "",
+  "description": "\"# miss-bug\" \r \"# missbug\" \r \"# missbug\" \r \"# missbug\" \r \"# missbug\"",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -17,5 +17,13 @@
     "cryptr": "^6.1.0",
     "express": "^4.18.2",
     "nodemon": "^2.0.20"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuperDuperAlon/missbug.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SuperDuperAlon/missbug/issues"
+  },
+  "homepage": "https://github.com/SuperDuperAlon/missbug#readme"
 }
