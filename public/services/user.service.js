@@ -1,5 +1,3 @@
-
-
 const BASE_URL = "/api/user/";
 
 export const userService = {
@@ -16,7 +14,8 @@ function get(userId) {
 }
 
 function signup(credentials) {
-  return axios.post(BASE_URL + "signup", credentials)
+  return axios
+    .post(BASE_URL + "signup", credentials)
     .then((res) => res.data)
     .then((user) => {
       _saveLoggedinUser(user);
@@ -25,12 +24,14 @@ function signup(credentials) {
 }
 
 function login(credentials) {
-  return axios.get(BASE_URL + 'login', credentials)
-      .then(res => res.data)
-      .then((user) => {
-        _saveLoggedinUser(user)
-          return user
-      })
+  return axios
+    .post(BASE_URL + "login", credentials)
+    .then((res) => res.data)
+    .then(({ data: user }) => {
+      console.log(user);
+      _saveLoggedinUser(user);
+      return user;
+    });
 }
 
 function getEmptyCredentials(
@@ -42,16 +43,17 @@ function getEmptyCredentials(
 }
 
 function getLoggedinUser() {
-  return JSON.parse(sessionStorage.getItem('loggedinUser') || null)
+  const test = (sessionStorage.getItem("loggedinUser"));
+  console.log(test);
+  return JSON.parse(test || null);
 }
 
 function logout() {
-  return axios.post(BASE_URL + 'logout')
-      .then(() => {
-          sessionStorage.removeItem('loggedinUser')
-      })
+  return axios.post(BASE_URL + "logout").then(() => {
+    sessionStorage.removeItem("loggedinUser");
+  });
 }
 
 function _saveLoggedinUser(user) {
-  sessionStorage.setItem('loggedinUser', JSON.stringify(user))
+  sessionStorage.setItem("loggedinUser", JSON.stringify(user || null));
 }

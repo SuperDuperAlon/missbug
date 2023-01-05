@@ -131,8 +131,9 @@ app.get("/api/user/:userId", (req, res) => {
 app.post("/api/user/login", (req, res) => {
   console.log('we entered');
   const { username, password } = req.body;
-  userService.getLoginToken({ username, password })
+  userService.login({ username, password })
     .then((user) => {
+      console.log(user);
       const loginToken = userService.getLoginToken(user);
       res.cookie("loginToken", loginToken);
       res.send(user);
