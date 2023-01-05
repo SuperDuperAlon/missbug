@@ -54,6 +54,8 @@ export function BugIndex() {
       });
   }
 
+// for testing purposes
+
   function onEditBug(bug) {
     const severity = +prompt("New severity?");
     // const description = propmt("New Description");
